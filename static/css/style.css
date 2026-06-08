@@ -140,3 +140,21 @@ hr {
 .alert-info { color: #0c5460; background-color: #d1ecf1; border-color: #bee5eb; }
 .alert-warning { color: #856404; background-color: #fff3cd; border-color: #ffeeba; }
 .alert-danger { color: #721c24; background-color: #f8d7da; border-color: #f5c6cb; }
+
+/* Delete button styling */
+.btn-delete-link {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  color: #dc3545;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  display: inline;
+}
+
+.btn-delete-link:hover {
+  color: #bd2130;
+  text-decoration: none;
+}

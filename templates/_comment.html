@@ -4,7 +4,10 @@
       <strong>{{ comment.user.username }}</strong> {# Use user.username #}
       <small>on {{ comment.date_posted.strftime('%Y-%m-%d %H:%M') }}</small> {# Use date_posted #}
        {% if current_user.is_authenticated and current_user.id == comment.user_id %}
-           | <a href="#">Delete</a>
+           | 
+           <form action="{{ url_for('delete_comment', comment_id=comment.id) }}" method="POST" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this comment?');">
+               <button type="submit" class="btn-delete-link">Delete</button>
+           </form>
        {% endif %}
   </p>
   {# Use nl2br filter to respect newlines entered in the textarea #}
